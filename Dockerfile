@@ -7,7 +7,7 @@ ENV LANG en_US.UTF-8
 
 #Runit
 RUN apt-get install -y runit 
-CMD /usr/sbin/runsvdir-start
+CMD env > /etc/envvars && /usr/sbin/runsvdir-start
 
 #Utilities
 RUN apt-get install -y vim less net-tools inetutils-ping wget curl git telnet nmap socat dnsutils netcat tree htop unzip sudo software-properties-common
