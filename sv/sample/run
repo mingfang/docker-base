@@ -2,5 +2,10 @@
 
 #sv start socklog-unix || exit 1
 
+#source env
+if [ -f /etc/envvars]; then
+  . /etc/envvars
+fi
+
 exec 2>&1
 #exec /usr/sbin/sshd -D -e
