@@ -1,1 +1,1 @@
-docker run -v /etc/localtime:/etc/localtime:ro -v `pwd`:/docker -w /docker --rm -i -t ssh /bin/bash
+docker run -v `pwd`:/docker -w /docker --rm -it base /bin/bash
