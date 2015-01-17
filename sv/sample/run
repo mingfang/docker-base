@@ -1,11 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 #sv start socklog-unix || exit 1
 
-#source env
-if [ -f /etc/envvars]; then
-  . /etc/envvars
-fi
+source /etc/envvars
+env
 
 exec 2>&1
 #exec /usr/sbin/sshd -D -e
