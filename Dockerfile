@@ -15,5 +15,5 @@ RUN echo 'export > /etc/envvars' >> /root/.bashrc
 RUN apt-get install -y vim less net-tools inetutils-ping wget curl git telnet nmap socat dnsutils netcat tree htop unzip sudo software-properties-common jq psmisc
 
 #Add runit services
-ADD sv /etc/service 
+COPY sv /etc/service 
 
