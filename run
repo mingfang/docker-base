@@ -1,3 +1,4 @@
 #!/bin/bash
+[[ "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" =~  .*docker-(.*) ]]
 
-docker run -d base
+docker run -d ${BASH_REMATCH[1]}
