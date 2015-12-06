@@ -6,5 +6,5 @@ node {
    sh "./build" 
 
    stage 'Push'
-   sh "./push"   
+   sh "bash -x ./push"   
 }
