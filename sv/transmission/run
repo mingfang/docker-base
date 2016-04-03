@@ -6,4 +6,4 @@ source /etc/envvars
 env
 
 exec 2>&1
-#exec /usr/sbin/sshd -D -e
+exec transmission-daemon -f -a 192.168.*.*
