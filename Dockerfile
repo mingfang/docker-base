@@ -15,9 +15,9 @@ RUN echo 'export > /etc/envvars' >> /root/.bashrc
 # Utilities
 RUN apt-get install -y vim less net-tools inetutils-ping wget curl git telnet nmap socat dnsutils netcat tree htop unzip sudo software-properties-common jq psmisc
 
-
-# Your Instructions Here
-
+RUN add-apt-repository ppa:transmissionbt/ppa && \
+    apt-get update && \
+    apt-get install -y transmission-cli transmission-common transmission-daemon
 
 # Add runit services
 COPY sv /etc/service 
