@@ -3,7 +3,6 @@
 #sv start socklog-unix || exit 1
 
 source /etc/envvars
-env
 
 exec 2>&1
-exec transmission-daemon -f -a 192.168.*.*
+exec <cmd>
