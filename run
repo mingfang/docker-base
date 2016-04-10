@@ -1,3 +1,4 @@
-mkdir -p data/config
-mkdir -p data/Downloads
-docker run -p 9091:9091 -p 51413:51413 -v `pwd`/data/config:/root/.config -v `pwd`/data/Downloads:/root/Downloads  -d transmission
+#!/bin/bash
+source helper
+
+docker run -d -t ${IMAGE}
