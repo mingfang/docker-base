@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sv start prestart || sleep 1 || exit 1
-
 source /etc/envvars
 
 exec 2>&1
